@@ -1,0 +1,73 @@
+<div class="border border-gray-800 rounded-lg shadow bg-[#121212] overflow-hidden">
+  <table class="table-fixed w-full text-xs sm:text-sm divide-y divide-gray-700">
+    <thead class="bg-[#81191c] text-gray-100">
+      <tr>
+        <th class="w-8 px-4 py-3 text-center font-medium uppercase">Ver</th>
+        <th class="w-1/5 px-6 py-3 text-left font-medium uppercase whitespace-normal">Superhéroe</th>
+        <th class="w-1/6 px-4 py-3 text-left font-medium uppercase truncate" title="Nombre Real">Nombre Real</th>
+        <th class="w-12 px-4 py-3 text-center font-medium uppercase whitespace-nowrap">Edad</th>
+        <th class="w-1/6 px-4 py-3 text-left font-medium uppercase hidden md:table-cell truncate" title="Planeta">Planeta</th>
+        <th class="w-1/6 px-4 py-3 text-left font-medium uppercase hidden lg:table-cell truncate" title="Debilidad">Debilidad</th>
+        <th class="w-1/6 px-4 py-3 text-left font-medium uppercase hidden 2xl:table-cell truncate" title="Poderes">Poderes</th>
+        <th class="w-1/6 px-4 py-3 text-left font-medium uppercase hidden 2xl:table-cell truncate" title="Aliados">Aliados</th>
+        <th class="w-1/6 px-4 py-3 text-left font-medium uppercase hidden 3xl:table-cell truncate" title="Enemigos">Enemigos</th>
+        <th class="w-1/6 px-6 py-3 text-left font-medium uppercase whitespace-normal">Creador</th>
+        <th class="w-48 px-4 py-3 text-center font-medium uppercase whitespace-nowrap">Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="superhero-table-body" class="divide-y divide-gray-800">
+      <% superheroes.forEach((h, idx) => { %>
+        <tr
+          <% if (idx >= 5) { %> style="display:none;" <% } %>
+          class="hover:bg-[#1c1c1c] transition-colors duration-200 cursor-pointer"
+          onclick="showSuperheroModal(this)"
+          data-name="<%= h.nombreSuperHeroe %>"
+          data-realname="<%= h.nombreReal %>"
+          data-age="<%= h.edad %>"
+          data-planet="<%= h.planetaOrigen %>"
+          data-weakness="<%= h.debilidad %>"
+          data-creator="<%= h.creador %>"
+          data-powers='<%= JSON.stringify(h.poderes||[]) %>'
+          data-allies='<%= JSON.stringify(h.aliados||[]) %>'
+          data-enemies='<%= JSON.stringify(h.enemigos||[]) %>'>
+          <td class="px-4 py-4 text-center">
+            <i
+              class="ph ph-eye text-blue-400 hover:text-blue-300 transition-colors cursor-pointer"
+              aria-label="Ver detalles"
+              onclick="event.stopPropagation(); showSuperheroModal(this.closest('tr'))"
+            ></i>
+          </td>
+          <td class="px-6 py-4 font-semibold text-yellow-500 whitespace-normal"><%= h.nombreSuperHeroe %></td>
+          <td class="px-4 py-4 text-gray-300 truncate"><%= h.nombreReal %></td>
+          <td class="px-4 py-4 text-center text-gray-400"><%= h.edad %></td>
+          <td class="px-4 py-4 text-gray-400 hidden md:table-cell truncate"><%= h.planetaOrigen %></td>
+          <td class="px-4 py-4 text-gray-400 hidden lg:table-cell truncate"><%= h.debilidad %></td>
+          <td class="px-4 py-4 text-gray-400 hidden 2xl:table-cell truncate"><%= (h.poderes||[]).join(', ') %></td>
+          <td class="px-4 py-4 text-gray-400 hidden 2xl:table-cell truncate"><%= (h.aliados||[]).join(', ') %></td>
+          <td class="px-4 py-4 text-gray-400 hidden 3xl:table-cell truncate"><%= (h.enemigos||[]).join(', ') %></td>
+          <td class="px-6 py-4 text-gray-400 whitespace-normal"><%= h.creador %></td>
+          <td class="px-4 py-4">
+            <div class="flex items-center justify-center gap-4">
+              <a
+                href="/api/heroes/<%= h._id %>/editar"
+                onclick="event.stopPropagation()"
+                class="bg-[#24557a] hover:bg-[#1b415e] text-white px-3 py-2 rounded-md text-xs font-medium flex items-center gap-1 transition"
+                aria-label="Editar <%= h.nombreSuperHeroe %>"
+              >
+                <i class="ph ph-pencil"></i> Editar
+              </a>
+              <button
+                type="button"
+                onclick="event.stopPropagation(); confirmDelete.open('<%= h._id %>', '<%= h.nombreSuperHeroe %>')"
+                class="bg-[#a52a2a] hover:bg-[#8b2323] text-white px-3 py-2 rounded-md text-xs font-medium flex items-center gap-1 transition"
+                aria-label="Eliminar <%= h.nombreSuperHeroe %>"
+              >
+                <i class="ph ph-trash"></i> Eliminar
+              </button>
+            </div>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>

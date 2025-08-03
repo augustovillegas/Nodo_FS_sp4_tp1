@@ -1,0 +1,48 @@
+<%
+const hasError = (f) => errors.find(e => e.param === f) ? 'border-red-600' : 'border-transparent';
+const getErrorMessage = (f) => {
+  const err = errors.find(e => e.param === f);
+  return err ? err.msg : '';
+};
+const getValue = (f) => {
+  if (old && old[f] != null) return old[f];
+  if (typeof superhero !== 'undefined' && superhero[f] != null) {
+    return Array.isArray(superhero[f]) ? superhero[f].join(', ') : superhero[f];
+  }
+  return '';
+};
+
+const fields = [
+  { name:'nombreSuperHeroe', label:'Nombre del Superhéroe',   type:'text',   required:true,  placeholder:'Ej: Spider-Man',         min:3,  max:60 },
+  { name:'nombreReal',      label:'Nombre Real',              type:'text',   required:true,  placeholder:'Ej: Peter Parker',       min:3,  max:60 },
+  { name:'edad',            label:'Edad',                     type:'number', required:true,  placeholder:'Ej: 25',                 min:0 },
+  { name:'planetaOrigen',   label:'Planeta de Origen',        type:'text',   required:false, placeholder:'Ej: Tierra',             min:3,  max:60 },
+  { name:'debilidad',       label:'Debilidad',                type:'text',   required:false, placeholder:'Ej: Kryptonita',         min:3,  max:60 },
+  { name:'poderes',         label:'Poderes',                  type:'text',   required:true,  placeholder:'Ej: Vuelo, Super fuerza' },
+  { name:'aliados',         label:'Aliados',                  type:'text',   required:false, placeholder:'Ej: Hulk, Thor' },
+  { name:'enemigos',        label:'Enemigos',                 type:'text',   required:false, placeholder:'Ej: Batman, Robin' },
+  { name:'creador',         label:'Creador',                  type:'text',   required:false, placeholder:'Ej: Augusto Villegas',           min:3,  max:60 }
+];
+%>
+
+<% fields.forEach(f => { %>
+  <div>
+    <label for="<%= f.name %>" class="block text-sm font-semibold mb-1">
+      <%= f.label %><% if (f.required) { %> <span class="text-red-500">*</span><% } %>
+    </label>
+    <input
+      id="<%= f.name %>"
+      name="<%= f.name %>"
+      type="<%= f.type %>"
+      placeholder="<%= f.placeholder %>"
+      autocomplete="off"
+      class="w-full px-4 py-2 rounded bg-[#222222] border <%= hasError(f.name) %> focus:outline-none focus:ring-2 focus:ring-yellow-400 text-white"
+      value="<%= getValue(f.name) %>"
+      <% if (f.required) { %> required <% } %>
+      <% if (f.type==='text' && f.min!=null) { %> minlength="<%= f.min %>" <% } %>
+      <% if (f.type==='text' && f.max!=null) { %> maxlength="<%= f.max %>" <% } %>
+      <% if (f.type==='number' && f.min!=null) { %> min="<%= f.min %>" <% } %>
+    />
+    <p class="mt-1 text-xs text-red-500 h-5"><%= getErrorMessage(f.name) %></p>
+  </div>
+<% }) %>

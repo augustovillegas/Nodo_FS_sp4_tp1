@@ -1,0 +1,47 @@
+<div class="mb-8">
+  <h1 class="text-4xl sm:text-5xl font-bold text-center text-yellow-400 tracking-wider [font-family:'Bangers',cursive] drop-shadow-sm">
+    Panel de Superhéroes
+  </h1>
+</div>
+
+<div class="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
+  <form id="search-form" class="flex items-center w-full">
+    <input
+      id="search-input"
+      type="text"
+      name="q"
+      placeholder="Buscar por nombre, planeta de origen, nombre real..."
+      class="flex-1 px-6 py-3 bg-[#222222] text-white border border-gray-700 rounded-l focus:outline-none focus:border-yellow-400"
+    />
+    <button
+      type="submit"
+      class="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-r transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
+    >
+      Buscar
+    </button>
+  </form>
+
+  <a
+    href="/api/heroes/agregar"
+    class="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
+  >
+    Añadir
+  </a>
+</div>
+
+<div id="table-container" class="overflow-hidden">
+  <%- include('partials/table', { superheroes }) %>
+  <%- include('partials/pagination') %>
+</div>
+
+<p id="no-results" class="hidden text-center text-gray-400 mt-4">
+  No hay resultados para el superhéroe buscado...
+</p>
+
+<%- include('partials/superheroModal') %>
+<%- include('partials/modal-delete') %>
+
+<script src="/js/dashboard-utils.js" defer></script>
+<script src="/js/pagination.js"        defer></script>
+<script src="/js/confirm-delete.js"    defer></script>
+<script src="/js/superhero-modal.js"   defer></script>

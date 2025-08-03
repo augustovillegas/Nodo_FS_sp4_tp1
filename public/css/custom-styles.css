@@ -1,0 +1,69 @@
+/* ===================== */
+/* --- COLORES Y FUENTES BASE --- */
+/* ===================== */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #1a1a1a;
+  color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* ===================== */
+/* --- BOTONES --- */
+/* ===================== */
+button,
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button.primary {
+  background-color: #e50914;
+  color: #fff;
+}
+button.primary:hover {
+  background-color: #ff1e2d;
+}
+
+button.secondary,
+a.secondary {
+  background-color: #444;
+  color: #fff;
+}
+button.secondary:hover,
+a.secondary:hover {
+  background-color: #666;
+}
+
+/* ===================== */
+/* --- ICONOS OSCUROS --- */
+/* ===================== */
+.icon-white {
+  filter: invert(100%) brightness(200%);
+  width: 20px;
+  height: 20px;
+}
+
+/* ===================== */
+/* --- ALERTAS --- */
+/* ===================== */
+.alert {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.alert-error {
+  background-color: #b71c1c;
+  color: #fff;
+}
+
+.alert-success {
+  background-color: #2e7d32;
+  color: #fff;
+}

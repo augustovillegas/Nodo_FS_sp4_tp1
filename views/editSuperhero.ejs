@@ -1,0 +1,33 @@
+<section class="bg-[#1a1a1a] text-white rounded-lg shadow-lg max-w-screen-xl mx-auto p-8 lg:p-12 my-8">
+  <h2 class="text-4xl font-bold mb-8 text-yellow-400">Editar Superhéroe</h2>
+
+  <%- include('partials/alerts', { errors }) %>
+
+  <form
+    id="superhero-form"
+    action="/api/heroes/<%= superhero._id %>/editar?_method=PUT"
+    method="POST"
+    novalidate
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+  >  
+    <%- include('partials/form-fields', { old, errors, superhero }) %>
+
+    <div class="lg:col-span-3 flex justify-end mt-6">
+      <%- include('partials/form-actions', {
+            submitLabel: 'Guardar cambios',
+            cancelHref: '/api/heroes'
+          }) %>
+    </div>
+  </form>
+
+  <%- include('partials/modal-confirmation', {
+        confirmTitle: 'Confirmar actualización',
+        confirmMessage: '¿Confirmas guardar los cambios en este superhéroe?'
+      }) %>
+</section>
+
+
+<script src="/js/form-utils.js"       defer></script>
+<script src="/js/confirm-modal.js"     defer></script> 
+<script src="/js/confirm-submit.js"    defer></script>
+<script src="/js/focus-errors.js"      defer></script>
