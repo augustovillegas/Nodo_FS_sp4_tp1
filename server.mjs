@@ -38,7 +38,7 @@ app.use((req, res, next) => {
   const cleanPath = req.path.split('/')[1];
   res.locals.page = cleanPath === '' ? 'home' : cleanPath;
   next();
-});
+}); // Middleware para fondo de deadpool
 
 // Rutas 
 app.get("/", (req, res) => res.render("landing", { title: "Inicio"}));
