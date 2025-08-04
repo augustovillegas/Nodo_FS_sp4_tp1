@@ -2,6 +2,7 @@ import { SuperHero } from "../models/superheroe.mjs";
 import { IRepository } from "./IRespository.mjs";
 
 
+
 class SuperHeroRepository extends IRepository {
 
   async obtenerTodos() {
