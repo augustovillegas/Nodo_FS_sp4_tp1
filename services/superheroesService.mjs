@@ -1,7 +1,8 @@
-import SuperHeroRepository from "../repository/SuperHeroRepository.mjs";
+import superHeroRepository from "../repository/superHeroRepository.mjs";
+
 
 export const obtenerTodosLosSuperheroes = async () => {
-  return await SuperHeroRepository.obtenerTodos();
+  return await superHeroRepository.obtenerTodos();
 };
 
 export const obtenerSuperheroePorId = async (id) => {
