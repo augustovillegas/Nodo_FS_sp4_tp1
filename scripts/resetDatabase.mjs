@@ -1,40 +1,47 @@
-// scripts/resetDatabase.mjs
 import fs from "fs/promises";
 import path from "path";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import { fileURLToPath } from "url";       // <-- Añadido para detectar ejecución directa
-import { conectarDB } from "../config/dbConfig.mjs";  // corregido: apuntar al config real :contentReference[oaicite:3]{index=3}
-import { SuperHero }  from "../models/superheroe.mjs";       // corregido: apuntar al root
+import { fileURLToPath } from "url";
+import { conectarDB } from "../config/dbConfig.mjs";
+import { SuperHero }  from "../models/superheroe.mjs";
 
 dotenv.config();
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname  = path.dirname(__filename);
+const JSON_PATH = path.join(__dirname, "..", "superheroes.json");
+
+const isDirectInvocation = process.argv[1] === __filename;
+
 export async function reestablecerBD() {
   try {
-    // 1) Conectar
+    console.log("🔌 Conectando a MongoDB…");
     await conectarDB();
 
-    // 2) Leer JSON fuente
-    const filePath = path.resolve("superheroes_extended.json");
-    const contenido = await fs.readFile(filePath, "utf8");
+    console.log(`📂 Leyendo archivo: ${JSON_PATH}`);
+    const contenido = await fs.readFile(JSON_PATH, "utf-8");
     const datos = JSON.parse(contenido);
+    console.log(`📊 JSON tiene ${datos.length} héroes`);
 
-    // 3) Borrar e insertar
-    await SuperHero.deleteMany({});
-    await SuperHero.insertMany(datos);
-    console.log(`🔄 BD reestablecida con ${datos.length} registros`);
+    console.log("🗑 Borrando colección…");
+    const { deletedCount } = await SuperHero.deleteMany({});
+    console.log(`🗑 Eliminados: ${deletedCount} documentos`);
 
+    console.log("📥 Insertando héroes…");
+    const insertados = await SuperHero.insertMany(datos);
+    console.log(`✅ Insertados: ${insertados.length} documentos`);
   } catch (err) {
-    console.error("❌ Error al reestablecer BD:", err);
-  } finally {
-    // 4) Desconectar
-    await mongoose.disconnect();
-    console.log("🔌 MongoDB desconectado");
+    console.error("❌ Error en resetDatabase:", err);
+  } finally {    
+    if (isDirectInvocation) {
+      await mongoose.disconnect();
+      console.log("🔌 MongoDB desconectado (CLI)");
+    }
   }
 }
 
-// → Ejecutar sólo si se llama directamente: node scripts/resetDatabase.mjs
-const __filename = fileURLToPath(import.meta.url);
-if (process.argv[1] === __filename) {       // reemplaza la condición anterior :contentReference[oaicite:4]{index=4}
+// consola: node scripts/resetDatabase.mjs
+if (isDirectInvocation) {
   reestablecerBD().then(() => process.exit(0));
 }

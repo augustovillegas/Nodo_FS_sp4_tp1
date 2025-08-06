@@ -54,8 +54,8 @@ app.use((req, res) => {
 });
 
 // → Tarea cron: cada 30 minutos
-cron.schedule("*/30 * * * *", () => {
-  console.log("🕒 Ejecutando resetDatabase cada 30 minutos");
+cron.schedule("*/20 * * * *", () => {
+  console.log("🕒 Ejecutando resetDatabase cada 20 minutos");
   reestablecerBD();
 });
 
