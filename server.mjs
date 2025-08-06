@@ -3,8 +3,10 @@ import dotenv from "dotenv";
 import path from "path";
 import methodOverride from "method-override";
 import expressLayouts from "express-ejs-layouts";
+import cron from "node-cron";
 import superHeroRoutes from "./routes/superHeroRoutes.mjs";
 import { conectarDB } from "./config/dbConfig.mjs";
+import { reestablecerBD } from "./scripts/resetDatabase.mjs";
 
 
 dotenv.config();
@@ -49,6 +51,12 @@ app.use("/api", superHeroRoutes);
 // Manejo de errores para rutas no encontradas 
 app.use((req, res) => {
   res.status(404).send({ mensaje: "404 Not Found - Ruta no encontrada" });
+});
+
+// → Tarea cron: cada 30 minutos
+cron.schedule("*/30 * * * *", () => {
+  console.log("🕒 Ejecutando resetDatabase cada 30 minutos");
+  reestablecerBD();
 });
 
 // Levantar el servidor 

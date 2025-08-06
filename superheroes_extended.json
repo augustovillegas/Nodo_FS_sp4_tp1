@@ -1,0 +1,567 @@
+[
+  {
+    "nombreSuperHeroe": "Superman",
+    "nombreReal": "Clark Kent",
+    "edad": 35,
+    "planetaOrigen": "Krypton",
+    "debilidad": "Kryptonita",
+    "poderes": [
+      "Super fuerza",
+      "Vuelo",
+      "Visión calorífica",
+      "Super velocidad"
+    ],
+    "aliados": [
+      "Batman",
+      "Wonder Woman",
+      "Justice League"
+    ],
+    "enemigos": [
+      "Lex Luthor",
+      "General Zod"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Batman",
+    "nombreReal": "Bruce Wayne",
+    "edad": 42,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Limitaciones humanas",
+    "poderes": [
+      "Intelecto excepcional",
+      "Combate cuerpo a cuerpo",
+      "Tecnología avanzada"
+    ],
+    "aliados": [
+      "Robin",
+      "Batgirl",
+      "Superman"
+    ],
+    "enemigos": [
+      "Joker",
+      "Bane"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Wonder Woman",
+    "nombreReal": "Diana Prince",
+    "edad": 1000,
+    "planetaOrigen": "Themyscira",
+    "debilidad": "Magia corrupta",
+    "poderes": [
+      "Super fuerza",
+      "Vuelo",
+      "Invulnerabilidad",
+      "Lazo de la verdad"
+    ],
+    "aliados": [
+      "Superman",
+      "Batman"
+    ],
+    "enemigos": [
+      "Ares",
+      "Cheetah"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Flash",
+    "nombreReal": "Barry Allen",
+    "edad": 28,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Velocidad excesiva",
+    "poderes": [
+      "Súper velocidad",
+      "Viaje en el tiempo"
+    ],
+    "aliados": [
+      "Justice League"
+    ],
+    "enemigos": [
+      "Reverse-Flash"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Green Lantern",
+    "nombreReal": "Hal Jordan",
+    "edad": 32,
+    "planetaOrigen": "Oa",
+    "debilidad": "Falta de voluntad",
+    "poderes": [
+      "Anillo de poder",
+      "Vuelo"
+    ],
+    "aliados": [
+      "Justice League"
+    ],
+    "enemigos": [
+      "Sinestro"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Aquaman",
+    "nombreReal": "Arthur Curry",
+    "edad": 30,
+    "planetaOrigen": "Atlantis",
+    "debilidad": "Deshidratación",
+    "poderes": [
+      "Respiración acuática",
+      "Comunicación con vida marina"
+    ],
+    "aliados": [
+      "Mera",
+      "Justice League"
+    ],
+    "enemigos": [
+      "Black Manta"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Cyborg",
+    "nombreReal": "Victor Stone",
+    "edad": 25,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Fallos tecnológicos",
+    "poderes": [
+      "Tecnología avanzada",
+      "Fuerza mejorada"
+    ],
+    "aliados": [
+      "Justice League"
+    ],
+    "enemigos": [
+      "Darkseid"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Martian Manhunter",
+    "nombreReal": "J'onn J'onzz",
+    "edad": 1000,
+    "planetaOrigen": "Marte",
+    "debilidad": "Fuego",
+    "poderes": [
+      "Metamorfosis",
+      "Telepatía",
+      "Intangibilidad"
+    ],
+    "aliados": [
+      "Justice League"
+    ],
+    "enemigos": [
+      "Ma'alefa'ak"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Spider-Man",
+    "nombreReal": "Peter Parker",
+    "edad": 18,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Responsabilidad emocional",
+    "poderes": [
+      "Agilidad sobrehumana",
+      "Fuerza sobrehumana",
+      "Sentido arácnido",
+      "Telarañas"
+    ],
+    "aliados": [
+      "Avengers"
+    ],
+    "enemigos": [
+      "Green Goblin",
+      "Doctor Octopus"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Iron Man",
+    "nombreReal": "Tony Stark",
+    "edad": 48,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Dependencia del reactor",
+    "poderes": [
+      "Armadura inteligente",
+      "Vuelo",
+      "Armamento avanzado"
+    ],
+    "aliados": [
+      "Avengers",
+      "War Machine"
+    ],
+    "enemigos": [
+      "Mandarín"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Capitán América",
+    "nombreReal": "Steve Rogers",
+    "edad": 100,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Humanidad vulnerable",
+    "poderes": [
+      "Fuerza mejorada",
+      "Escudo indestructible"
+    ],
+    "aliados": [
+      "Avengers"
+    ],
+    "enemigos": [
+      "Cráneo Rojo"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Thor",
+    "nombreReal": "Thor Odinson",
+    "edad": 1500,
+    "planetaOrigen": "Asgard",
+    "debilidad": "No apto sin Mjolnir",
+    "poderes": [
+      "Control del rayo",
+      "Super fuerza",
+      "Vuelo"
+    ],
+    "aliados": [
+      "Avengers"
+    ],
+    "enemigos": [
+      "Loki"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Hulk",
+    "nombreReal": "Bruce Banner",
+    "edad": 40,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Ira incontrolable",
+    "poderes": [
+      "Fuerza ilimitada",
+      "Regeneración"
+    ],
+    "aliados": [
+      "Avengers"
+    ],
+    "enemigos": [
+      "Abominación"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Black Panther",
+    "nombreReal": "T'Challa",
+    "edad": 35,
+    "planetaOrigen": "Wakanda",
+    "debilidad": "Protección de vibranium",
+    "poderes": [
+      "Agilidad mejorada",
+      "Intelecto",
+      "Tecnología wakandiana"
+    ],
+    "aliados": [
+      "Avengers"
+    ],
+    "enemigos": [
+      "Klaw"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Doctor Strange",
+    "nombreReal": "Stephen Strange",
+    "edad": 42,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Sombras místicas",
+    "poderes": [
+      "Magia",
+      "Manipulación del tiempo"
+    ],
+    "aliados": [
+      "Avengers"
+    ],
+    "enemigos": [
+      "Dormammu"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Black Widow",
+    "nombreReal": "Natasha Romanoff",
+    "edad": 35,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Sin poderes propios",
+    "poderes": [
+      "Espionaje",
+      "Combate cuerpo a cuerpo"
+    ],
+    "aliados": [
+      "Avengers"
+    ],
+    "enemigos": [
+      "Taskmaster"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Mega Man",
+    "nombreReal": "Rock",
+    "edad": 12,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Energía limitada",
+    "poderes": [
+      "Cañón de brazo",
+      "Copia de habilidades"
+    ],
+    "aliados": [
+      "Dr. Light",
+      "Roll"
+    ],
+    "enemigos": [
+      "Dr. Wily"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Ryu",
+    "nombreReal": "Ryu",
+    "edad": 31,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Humildad excesiva",
+    "poderes": [
+      "Hadouken",
+      "Shoryuken",
+      "Tatsumaki Senpukyaku"
+    ],
+    "aliados": [
+      "Ken Masters"
+    ],
+    "enemigos": [
+      "M. Bison"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Chun-Li",
+    "nombreReal": "Xiuying",
+    "edad": 29,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Impaciencia",
+    "poderes": [
+      "Patada relámpago",
+      "Velocidad mejorada"
+    ],
+    "aliados": [
+      "Interpol",
+      "Ryu"
+    ],
+    "enemigos": [
+      "Shadaloo"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Morrigan Aensland",
+    "nombreReal": "Morrigan Aensland",
+    "edad": 600,
+    "planetaOrigen": "Mundo Demoníaco",
+    "debilidad": "Sed de poder",
+    "poderes": [
+      "Vuelo",
+      "Magia oscura"
+    ],
+    "aliados": [
+      "Lilith"
+    ],
+    "enemigos": [
+      "Jedah Dohma"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Dante",
+    "nombreReal": "Dante Sparda",
+    "edad": 30,
+    "planetaOrigen": "Infierno",
+    "debilidad": "Vanidad",
+    "poderes": [
+      "Espada Rebellion",
+      "Transformación demoníaca"
+    ],
+    "aliados": [
+      "Vergil"
+    ],
+    "enemigos": [
+      "Lucifer"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Strider Hiryu",
+    "nombreReal": "Hiryu",
+    "edad": 19,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Honor estricto",
+    "poderes": [
+      "Vile",
+      "Teleportación corta"
+    ],
+    "aliados": [
+      "INEST"
+    ],
+    "enemigos": [
+      "Grand Master Meio"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Arthur",
+    "nombreReal": "Arthur",
+    "edad": 35,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Encantamientos limitados",
+    "poderes": [
+      "Espada Excalibur",
+      "Escudo"
+    ],
+    "aliados": [
+      "Princesa Prin-Prin"
+    ],
+    "enemigos": [
+      "Medeus"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Terry Bogard",
+    "nombreReal": "Terry Bogard",
+    "edad": 30,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Impulsividad",
+    "poderes": [
+      "Power Wave",
+      "Burn Knuckle"
+    ],
+    "aliados": [
+      "Andy Bogard"
+    ],
+    "enemigos": [
+      "Geese Howard"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Mai Shiranui",
+    "nombreReal": "Mai Shiranui",
+    "edad": 28,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Fuego",
+    "poderes": [
+      "Combate con abanico",
+      "Agilidad"
+    ],
+    "aliados": [
+      "Andy Bogard"
+    ],
+    "enemidos": [
+      "Vice"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Kyo Kusanagi",
+    "nombreReal": "Kyo Kusanagi",
+    "edad": 25,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Emociones inestables",
+    "poderes": [
+      "Piroquinesis",
+      "Combate cuerpo a cuerpo"
+    ],
+    "aliados": [
+      "Benimaru Nikaido"
+    ],
+    "enemigos": [
+      "Iori Yagami"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Iori Yagami",
+    "nombreReal": "Iori Yagami",
+    "edad": 26,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Corazón oscuro",
+    "poderes": [
+      "Piroquinesis roja",
+      "Regeneración"
+    ],
+    "aliados": [
+      "Chris"
+    ],
+    "enemigos": [
+      "Kyo Kusanagi"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Athena Asamiya",
+    "nombreReal": "Athena Asamiya",
+    "edad": 16,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Sensibilidad psíquica",
+    "poderes": [
+      "Psicoenergía",
+      "Vuelo"
+    ],
+    "aliados": [
+      "Sie Kensou"
+    ],
+    "enemigos": [
+      "Chizuru Kagura"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Rock Howard",
+    "nombreReal": "Rock Howard",
+    "edad": 19,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Dudas internas",
+    "poderes": [
+      "Estilo luchador",
+      "Manipulación de ki"
+    ],
+    "aliados": [
+      "Terry Bogard"
+    ],
+    "enemigos": [
+      "Geese Howard"
+    ],
+    "creador": "Augusto"
+  },
+  {
+    "nombreSuperHeroe": "Leona Heidern",
+    "nombreReal": "Leona Heidern",
+    "edad": 27,
+    "planetaOrigen": "Tierra",
+    "debilidad": "Estabilidad emocional",
+    "poderes": [
+      "Energía oculta",
+      "Entrenamiento militar"
+    ],
+    "aliados": [
+      "Blue Mary"
+    ],
+    "enemigos": [
+      "Rugal Bernstein"
+    ],
+    "creador": "Augusto"
+  }
+]
