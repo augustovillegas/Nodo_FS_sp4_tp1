@@ -53,11 +53,11 @@ app.use((req, res) => {
   res.status(404).send({ mensaje: "404 Not Found - Ruta no encontrada" });
 });
 
-// → Tarea cron: cada 1 minuto
+// → Tarea cron
 cron.schedule(
-  "*/45 * * * * *", 
+  "0 */5 * * * *", 
   () => {
-    console.log("🕒 Ejecutando resetDatabase cada 45 segundos");
+    console.log("🕒 Ejecutando resetDatabase cada 5 minutos");
     reestablecerBD();
   },
   {
