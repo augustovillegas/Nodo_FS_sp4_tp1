@@ -53,11 +53,19 @@ app.use((req, res) => {
   res.status(404).send({ mensaje: "404 Not Found - Ruta no encontrada" });
 });
 
-// → Tarea cron: cada 30 minutos
-cron.schedule("*/20 * * * *", () => {
-  console.log("🕒 Ejecutando resetDatabase cada 20 minutos");
-  reestablecerBD();
-});
+// → Tarea cron: cada 1 minuto
+cron.schedule(
+  "*/45 * * * * *", 
+  () => {
+    console.log("🕒 Ejecutando resetDatabase cada 45 segundos");
+    reestablecerBD();
+  },
+  {
+    scheduled: true,
+    timezone: "America/Argentina/Catamarca"
+  }
+);
+
 
 // Levantar el servidor 
 app.listen(PORT, () => {
